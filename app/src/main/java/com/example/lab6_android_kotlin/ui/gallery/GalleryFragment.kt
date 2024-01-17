@@ -19,17 +19,19 @@ import retrofit2.http.GET
 import java.math.BigDecimal
 import java.math.RoundingMode
 
-data class GoldRate(
-    val data: String,
-    val cena: Double
-)
 
-interface NbpApiService {
-    @GET("cenyzlota")
-    suspend fun getGoldPrice(): List<GoldRate>
-}
 
 class GalleryFragment : Fragment() {
+
+    data class GoldRate(
+        val data: String,
+        val cena: Double
+    )
+
+    interface NbpApiService {
+        @GET("cenyzlota")
+        suspend fun getGoldPrice(): List<GoldRate>
+    }
 
     private var _binding: FragmentGalleryBinding? = null
     private val binding get() = _binding!!

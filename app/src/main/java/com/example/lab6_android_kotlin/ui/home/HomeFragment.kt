@@ -70,7 +70,7 @@ class HomeFragment : Fragment() {
         spinnerFirstConversion = binding.spinnerFirstConversion
         spinnerSecondConversion = binding.spinnerSecondConversion
 
-        val currencies = arrayOf("USD", "EUR", "GBP", "PLN")
+        val currencies = arrayOf("USD", "EUR", "GBP", "PLN","JPY")
 
         val adapter =
             ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, currencies)
